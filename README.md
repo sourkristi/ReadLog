@@ -6,3 +6,5 @@ Readlog is a responsive web application engineered to simplify personal book log
 - Design an intuitive and clutter-free interface for book lovers.
 - Implement robust CRUD (Create, Read, Update, Delete) operations for personal reading logs.
 - Apply modern web design patterns learned during coursework.
+- Integrate an API (Google Books API)
+- Integrate language support
