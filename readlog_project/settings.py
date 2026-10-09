@@ -61,12 +61,14 @@ AUTH_USER_MODEL = 'accounts.User'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
-        'OPTIONS': {'charset': 'utf8mb4'},
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
     }
 }
 
